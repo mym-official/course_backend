@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import logo from '../assets/mym_with_heading.jpeg'; // Make sure the path to the logo is correct
+import logo from '../assets/mym_with_heading.jpeg';
 import '../styles/Header.css';
 
 export default function Header() {
