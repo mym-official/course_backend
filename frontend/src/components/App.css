@@ -1,0 +1,162 @@
+.App {
+  text-align: left;
+}
+
+.container {
+  padding: 1em;
+}
+
+.MessageList {
+  overflow-y: auto;
+  overflow: auto;
+  width: 60em;
+  max-height: 600px;
+  min-height: 500px;
+  background-color: #c4f2ffa1;
+  margin-top: 1em;
+  border-radius: 10px;
+  padding: 1em;
+}
+
+.scroll {
+  overflow-y: auto;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.custom_row {
+  display: flex;
+  flex-direction: row;
+}
+
+.message-list {
+  margin-left: '1em';
+}
+
+@media (max-width: 1100px) {
+  .custom_row {
+    flex-direction: column;
+  }
+
+  ;
+
+  .message-list {
+    margin-left: 0em;
+  }
+}
+
+.App-header {
+  background-color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.MuiDialog-paperWidthSm {
+  width: 700px;
+}
+
+.btn-blue {
+  background: #3838E1 !important;
+  color: white !important;
+}
+
+.btn-groups-navigate {
+  margin-top: 1em;
+  display: grid !important;
+  grid-template-columns: repeat(2, max-content);
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+  right: 0px;
+}
+
+.MuiDialogContent-root {
+  position: relative;
+  margin: 16px 24px !important;
+  padding: 0px !important;
+  border-bottom: none !important;
+}
+
+.css-yk16xz-control {
+  padding: 9px;
+}
+
+.MuiOutlinedInput-root {
+  width: 100%;
+}
+
+.dialog-close-btn {
+  position: absolute !important;
+  right: 24px;
+  top: 16px;
+}
+
+.MuiRadio-colorSecondary.Mui-checked,
+.MuiIconButton-colorSecondary {
+  color: #3838E1 !important;
+  background: transparent !important;
+}
+
+.MuiStepIcon-root.MuiStepIcon-active {
+  color: #3838E1 !important;
+}
+
+.step-2 {
+  align-self: center;
+}
+
+.rdrCalendarWrapper {
+  margin-left: 1em;
+}
+
+.btn-filter {
+  padding: 9px;
+  background-color: "#3838E1" !important;
+  margin-left: '1em' !important;
+  align-self: 'center'
+}
+
+._1tkHS {
+  display: flex !important;
+  position: absolute !important;
+  top: -5em !important;
+  left: 0px !important;
+  width: max-content !important;
+}
+
+.errorDialog {
+  max-width: 20em !important;
+}
+
+.botConfigScroll {
+  overflow-y: auto;
+  max-height: 60%;
+}

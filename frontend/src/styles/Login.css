@@ -1,0 +1,50 @@
+.login-container {
+  padding: 0em;
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  width: 100%;
+}
+
+.text-field {
+  display: flex;
+  align-self: center;
+}
+
+.login-left-container {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  background-color: black;
+  justify-content: center;
+}
+
+.login-right-container {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  background-color: white;
+  justify-content: center;
+}
+
+.mym-logo {
+  width: 40%;
+  align-self: center;
+}
+
+.heading {
+  color: white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 30px;
+  text-align: center;
+  margin-top: 1em;
+}
+
+.sub-heading {
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 2em;
+  max-width: 70%;
+  align-self: center;
+}
