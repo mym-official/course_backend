@@ -31,7 +31,6 @@ def get_videos():
         videos = []
         for filename in os.listdir(config.VIDEOS_FOLDER):
             if filename.endswith('.mp4'):
-                video_path = os.path.join(config.VIDEOS_FOLDER, filename)
                 video_title = os.path.splitext(filename)[0]
                 videos.append({
                     'title': video_title,
