@@ -1,37 +1,33 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import '../styles/videoPlayer.css';
 
 export default function VideoPlayer({ video }) {
   const { base_url } = require('../config');
   const videoUrl = `${base_url}play_video/${encodeURIComponent(video.filename)}`;
-  const [showControls, setShowControls] = useState(false);
+  const [ipAddress, setIpAddress] = useState('');
 
-  const handleMouseEnter = () => {
-    setShowControls(true);
-  };
-
-  const handleMouseLeave = () => {
-    setShowControls(false);
-  };
+  useEffect(() => {
+    axios.get('https://api.ipify.org?format=json')
+      .then(response => {
+        setIpAddress(response.data.ip);
+      })
+      .catch(error => {
+        console.error('Error fetching the IP address:', error);
+      });
+  }, []);
 
   return (
-    <div
-      className="video-player-container"
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-    >
+    <div className="video-player-container">
       <video
         className="video"
         controls
-        autoPlay
-        muted={false}
-        loop
         src={videoUrl}
       >
         Your browser does not support the video tag.
       </video>
-      <div className={`overlay ${showControls ? 'show-controls' : ''}`}>
-        <span className="overlay-text">MYM</span>
+      <div className="overlay">
+        <span className="overlay-text">{ipAddress}</span>
       </div>
     </div>
   );
