@@ -27,8 +27,7 @@ def list_videos():
 
 @app.route('/play_video/<filename>')
 def serve_video(filename):
-    video_path = os.path.join(config.VIDEOS_FOLDER, filename)
-    return send_file(video_path, mimetype='video/mp4')
+    return dbops.serve_video(request, filename)
 
 
 if __name__ == '__main__':

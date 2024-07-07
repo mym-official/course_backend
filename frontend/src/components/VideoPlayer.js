@@ -15,11 +15,26 @@ export default function VideoPlayer({ video }) {
       .catch(error => {
         console.error('Error fetching the IP address:', error);
       });
-  }, []);
+
+    const videoElement = document.getElementById('video-player');
+    const handleContextMenu = (e) => {
+      e.preventDefault();
+    };
+
+    if (videoElement) {
+      videoElement.addEventListener('contextmenu', handleContextMenu);
+    }
+    return () => {
+      if (videoElement) {
+        videoElement.removeEventListener('contextmenu', handleContextMenu);
+      }
+    };
+  }, [video.filename]);
 
   return (
     <div className="video-player-container">
       <video
+        id="video-player"
         className="video"
         controls
         src={videoUrl}
@@ -27,7 +42,7 @@ export default function VideoPlayer({ video }) {
         Your browser does not support the video tag.
       </video>
       <div className="overlay">
-        <span className="overlay-text">{ipAddress}</span>
+        <span className="overlay-text">NIHIT: {ipAddress}</span>
       </div>
     </div>
   );
