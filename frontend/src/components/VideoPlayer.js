@@ -37,6 +37,8 @@ export default function VideoPlayer({ video }) {
         id="video-player"
         className="video"
         controls
+        disablePictureInPicture
+        controlsList="nodownload" 
         src={videoUrl}
       >
         Your browser does not support the video tag.
