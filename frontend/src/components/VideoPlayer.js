@@ -38,7 +38,7 @@ export default function VideoPlayer({ video }) {
         className="video"
         controls
         disablePictureInPicture
-        controlsList="nodownload" 
+        controlsList="nodownload nofullscreen" 
         src={videoUrl}
       >
         Your browser does not support the video tag.
