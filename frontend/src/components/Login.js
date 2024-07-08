@@ -44,9 +44,9 @@ export default function Login(props) {
         <div className='heading'>
           Welcome to MYM
         </div>
-        <div className='sub-heading'>
+        {/* <div className='sub-heading'>
           Boost Your Career with our product
-        </div>
+        </div> */}
       </div>
       <div className='login-right-container'>
         <div className='heading' style={{ color: 'black', margin: '1em' }}>
